@@ -90,12 +90,6 @@ Expression * Parser::term() {
     }
 }
 
-Expression * Parser::digit() {
-    int num = lookAhead - '0';
-    cout << "Creating new number node with value: " << num << "(actual: " << (int)lookAhead << ")" << endl;
-    return new Number(num);
-}
-
 void Parser::next() {
     lookAhead = mExpressionTokens.front();
     mExpressionTokens.pop_front();

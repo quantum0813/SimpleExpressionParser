@@ -1,9 +1,24 @@
+/**
+ * Copyright 2015 Eric Vestfals
+ * esv5@zips.uakron.edu
+ *
+ * AST.hpp
+ *
+ * This class lays out the classes that make up the grammar for the calculator
+ * language. Every class inherits from the base class "Expression". Number
+ * inherits Expression directly while the rest of the class inherit from
+ * "BinaryExpr" which in turn inherits from Expression.
+ */
+
 #ifndef AST_HPP
 #define AST_HPP
 
 #include <iostream>
 #include <deque>
 
+/**
+ * Each class shall inherit the functions evaluate(), printPostfix() and printSExpr()
+ */
 class Expression {
     public:
         virtual ~Expression() {}

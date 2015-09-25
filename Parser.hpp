@@ -1,3 +1,14 @@
+/**
+ * Copyright 2015 Eric Vestfals
+ * esv5@zips.uakron.edu
+ *
+ * Parser.hpp
+ *
+ * This class contains the functionality to take an expression string and produce
+ * its corresponding AST. It is constructed with an expression string. The AST is
+ * then produced by calling parse().
+ */
+
 #ifndef PARSER_HPP
 #define PARSER_HPP
 

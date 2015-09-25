@@ -1,6 +1,18 @@
+/**
+ * Copyright 2015 Eric Vestfals
+ * esv5@zips.uakron.edu
+ *
+ * Parser.cpp
+ *
+ * Upon construction of the parser, the string is tokenized and each character
+ * is put into a deque.
+ *
+ * When parse() is called the AST is constructed recursively. Precedence is set
+ * by the 4 different levels of the grammar, which correspond to functions in this
+ * class.
+ */
+
 #include "Parser.hpp"
-#include <iostream>
-#include <sstream>
 #include <vector>
 #include <cstring>
 
@@ -14,9 +26,12 @@ Parser::Parser(std::string str) : mExpressionStr(str) {
     }
 }
 
+/**
+ * Pop the first token off of the deque and set it to lookAhead,
+ * and start the parsing by calling expression().
+ */
 Expression * Parser::parse() {
     next();
-    //cout << lookAhead << endl;
     return expression();
 }
 
@@ -80,7 +95,7 @@ Expression * Parser::term() {
         Expression * e = expression();
         if (lookAhead != ')') {
             // Syntax error!
-            // throw new SyntaxError("Expected )");
+            // throw SyntaxError
         }
         next();
         return e;

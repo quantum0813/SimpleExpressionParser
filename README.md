@@ -21,6 +21,8 @@ To build this project just run:
 
 Three executables will be created: calc, calc2postfix and calc2sexpr.
 
+To use the program just run `./calc`, `./calc2postfix` or `./calc2sexpr` in a terminal. The program will wait for you to input an expression, and then press enter. You can also use the test suite to test multiple expressions at once (see below).
+
 #Test Suite
 A simple Python-based test suite has been created to ease the testing of these programs.
 

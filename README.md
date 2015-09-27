@@ -28,7 +28,7 @@ A simple Python-based test suite has been created to ease the testing of these p
 
 To use the test suite:
 
-1. Create a file named `testSuite` in the directory containing the Python files and the executables (a default one is provided).
+1. Create a file named `testFile` in the directory containing the Python files and the executables (a default one is provided).
 2. Write expressions that you want to be evaluated (one per line)
 3. Execute the Python script `test.py`
 4. The script will prompt you to enter which test suite you want to run (or all of them at once).
